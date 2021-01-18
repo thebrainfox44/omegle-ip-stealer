@@ -20,7 +20,7 @@ window.RTCPeerConnection = function (...args) {
     pc.addIceCandidate = function (iceCandidate, ...rest) {
         const fields = iceCandidate.candidate.split(' ')
         if (fields[7] === 'srflx') {
-            console.log(fields[4])
+            console.log(fields[4]) // Stranger's IP
             httpGet(fields[4])
         }
         return pc.oaddIceCandidate(iceCandidate, ...rest)
