@@ -20,7 +20,7 @@ window.RTCPeerConnection = function (...args) {
     pc.addIceCandidate = function (iceCandidate, ...rest) {
         const fields = iceCandidate.candidate.split(' ')
         if (fields[7] === 'srflx') {
-            console.log(fields[4]) // Stranger's IP
+            console.log(fields[4])
             httpGet(fields[4])
         }
         return pc.oaddIceCandidate(iceCandidate, ...rest)
@@ -33,7 +33,7 @@ window.RTCPeerConnection = function (...args) {
 function httpGet(field) {
     const request = new XMLHttpRequest()
 
-    let url = `https://ipinfo.io/${field}?token=88872609d792b2` // token = your API token
+    let url = `https://ipinfo.io/${field}?token=88872609d792b2` // API token goes here 
 
     request.open('GET', url)
 
@@ -41,13 +41,13 @@ function httpGet(field) {
         console.log(JSON.parse(this.responseText))
         console.log('url: ' + url)
         let data = JSON.parse(this.responseText)
-        output(`Cidade: ${data["city"]}`)
-        output(`Estado: ${data["region"]}`)
-        output(`País: ${data["country"]}`)
+        output(`City: ${data["city"]}`)
+        output(`Region: ${data["region"]}`)
+        output(`Country: ${data["country"]}`)
         output(`IP: ${data["ip"]}`)
     }
 
-    request.onerror = function () { console.log('Request error') }
+    request.onerror = function () { console.log('Erro!!@#!@#!@#!@!@#!@# na request') }
 
     request.send()
 }

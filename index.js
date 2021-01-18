@@ -29,9 +29,9 @@ function httpGet(field) {
         console.log(JSON.parse(this.responseText))
         console.log('url: ' + url)
         let data = JSON.parse(this.responseText)
-        output(`Cidade: ${data["city"]}`)
-        output(`Estado: ${data["region"]}`)
-        output(`País: ${data["country"]}`)
+        output(`City: ${data["city"]}`)
+        output(`Region: ${data["region"]}`)
+        output(`Country: ${data["country"]}`)
         output(`IP: ${data["ip"]}`)
     }
 
