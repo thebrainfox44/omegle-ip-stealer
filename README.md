@@ -1,7 +1,7 @@
 # Omegle Stalker
 JavaScript script that gets the stranger's location and IP
 
-![Sample Image](./sample.png "Image")
+![Sample Image](./image.png "Image")
 
 **YOU NEED TO DISABLE ADBLOCK IN ORDER TO USE THIS SCRIPT SINCE IT BLOCKS THE REQUESTS.**
 
