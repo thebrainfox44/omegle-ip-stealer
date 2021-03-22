@@ -47,7 +47,7 @@ function httpGet(field) {
         output(`IP: ${data["ip"]}`)
     }
 
-    request.onerror = function () { console.log('Erro!!@#!@#!@#!@!@#!@# na request') }
+    request.onerror = function () { console.log('Request ERROR !@#!@ Make sure you have ADBLOCK off!!!!') }
 
     request.send()
 }
